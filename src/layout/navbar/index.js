@@ -4,6 +4,8 @@ import NavItems from './items';
 import HeaderLogo from '../../conponets/logo/header-logo';
 import BtnDrawer from '../../conponets/button/btn-drawer';
 import HeaderSearch from '../../conponets/search/header-search';
+import UserBadge from '../../conponets/badge/user-badge';
+import { Wraper, UserInfo } from './navbar-style';
 const { Header, Sider, Content } = Layout;
 
 class Index extends Component {
@@ -42,7 +44,7 @@ class Index extends Component {
                         <NavItems />
                     </Sider>
                     <Layout>
-                        <Header className="pl-3 pb-3" style={{ background: '#fff', padding: 0, height: 64 }}>                            
+                        <Header className="pl-3 pb-3" style={{ background: '#fff', padding: 0, height: 126 }}>                            
                             <Row>                                
                                 <Col md={24}>
                                     <div className="header-search">
@@ -59,7 +61,18 @@ class Index extends Component {
                                         </Row>
                                     </div>
                                 </Col>                                
-                            </Row>                                                          
+                            </Row>                           
+                            <Row>                                
+                                <Col md={12}>                                
+                                    <Wraper>
+                                        <UserBadge />
+                                        <UserInfo>
+                                            <h4>Ricardo P. Smith</h4>
+                                            <span>admin</span>
+                                        </UserInfo>
+                                    </Wraper>                                    
+                                </Col>                                
+                            </Row>                               
                         </Header>                        
                         <Content
                             style={{
