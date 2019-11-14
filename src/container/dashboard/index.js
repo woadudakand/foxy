@@ -1,4 +1,5 @@
 import React, { Fragment, lazy, Suspense} from 'react';
+import Notification from '../../conponets/notification';
 
 const Layout = lazy(() => import('../../layout/navbar'));
 const index = () => {
@@ -6,7 +7,7 @@ const index = () => {
        <Fragment>
            <Suspense fallback={<div>Loading...........</div>}>
                 <Layout>
-                    <h3>Somthing is Ready ............</h3>
+                    <Notification />
                 </Layout>
            </Suspense>
        </Fragment>

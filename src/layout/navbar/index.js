@@ -45,7 +45,12 @@ class Index extends Component {
                         <NavItems />
                     </Sider>
                     <Layout>
-                        <Header className="pl-3 pb-3" style={{ background: '#fff', padding: 0, height: 139 }}>                            
+                        <Header className="pl-3 pb-3" style={{ 
+                            background: '#fff', 
+                            padding: 0, 
+                            height: 139,
+                            boxShadow : '0px 1px 4px -2px'
+                        }}>                            
                             <Row>                                
                                 <Col md={24}>
                                     <div className="header-search">
@@ -90,7 +95,7 @@ class Index extends Component {
                                                 <Span>Notification</Span>                                            
                                             </MessageInfo>
                                             <MessageBadge 
-                                                type='alert'
+                                                type='bell'
                                                 count={3}
                                             />
                                         </Wraper>
@@ -100,10 +105,8 @@ class Index extends Component {
                         </Header>                        
                         <Content
                             style={{
-                            margin: '24px 16px',
-                            padding: 24,
-                            background: '#fff',
-                            minHeight: '100vh',
+                                margin: '24px 15px',
+                                minHeight: '100vh',                                
                             }}
                         >
                         {
