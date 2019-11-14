@@ -5,7 +5,8 @@ import HeaderLogo from '../../conponets/logo/header-logo';
 import BtnDrawer from '../../conponets/button/btn-drawer';
 import HeaderSearch from '../../conponets/search/header-search';
 import UserBadge from '../../conponets/badge/user-badge';
-import { Wraper, UserInfo } from './navbar-style';
+import { Wraper, UserInfo, MessageInfo, Span, AlertWraper, Hr } from './navbar-style';
+import MessageBadge from '../../conponets/badge/mail&notify';
 const { Header, Sider, Content } = Layout;
 
 class Index extends Component {
@@ -44,7 +45,7 @@ class Index extends Component {
                         <NavItems />
                     </Sider>
                     <Layout>
-                        <Header className="pl-3 pb-3" style={{ background: '#fff', padding: 0, height: 126 }}>                            
+                        <Header className="pl-3 pb-3" style={{ background: '#fff', padding: 0, height: 139 }}>                            
                             <Row>                                
                                 <Col md={24}>
                                     <div className="header-search">
@@ -61,7 +62,8 @@ class Index extends Component {
                                         </Row>
                                     </div>
                                 </Col>                                
-                            </Row>                           
+                            </Row>
+                            <Hr />                          
                             <Row>                                
                                 <Col md={12}>                                
                                     <Wraper>
@@ -69,9 +71,31 @@ class Index extends Component {
                                         <UserInfo>
                                             <h4>Ricardo P. Smith</h4>
                                             <span>admin</span>
-                                        </UserInfo>
-                                    </Wraper>                                    
-                                </Col>                                
+                                        </UserInfo>                                        
+                                    </Wraper>
+                                </Col>
+                                <Col md={12}>
+                                    <AlertWraper>
+                                        <Wraper>
+                                            <MessageInfo>
+                                                <Span>Message</Span>                                            
+                                            </MessageInfo>
+                                            <MessageBadge 
+                                                type='mail'
+                                                count={5}
+                                            />
+                                        </Wraper>
+                                        <Wraper>
+                                            <MessageInfo>
+                                                <Span>Notification</Span>                                            
+                                            </MessageInfo>
+                                            <MessageBadge 
+                                                type='alert'
+                                                count={3}
+                                            />
+                                        </Wraper>
+                                    </AlertWraper>
+                                </Col>                               
                             </Row>                               
                         </Header>                        
                         <Content

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon, Input, AutoComplete } from 'antd';
-
+import './style.css';
 import { options } from './config';
 import { Wraper } from './search-style';
 
@@ -19,7 +19,11 @@ const HeaderSearch = () => {
                 placeholder="input here"
                 optionLabelProp="value"
             >
-                <Input suffix={<Icon type="search" className="certain-category-icon" />} />
+                <Input 
+                    suffix={<Icon type="search" 
+                    className="certain-category-icon" 
+                    style={{borderRadius : '20px'}}
+                />} />
             </AutoComplete>
         </Wraper>
        
