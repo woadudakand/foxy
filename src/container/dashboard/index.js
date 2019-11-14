@@ -4,6 +4,7 @@ import { Row, Col } from 'antd';
 import CardFrame from '../../conponets/card/cardFrame';
 import { Section } from './dash-style';
 import { analythics } from './config';
+import TlActivites from '../../conponets/timeline/activites';
 
 const Layout = lazy(() => import('../../layout/navbar'));
 const BarChart = lazy(() => import('../../conponets/chart/chartjs2/barchart'));
@@ -19,6 +20,11 @@ const index = () => {
                             <Col md={12}>
                                 <CardFrame title='Analythics' menu={analythics} >
                                     <BarChart />
+                                </CardFrame>
+                            </Col>
+                            <Col md={12}>
+                                <CardFrame title='Activites' menu={analythics} >
+                                    <TlActivites />
                                 </CardFrame>
                             </Col>
                         </Row>
