@@ -1,33 +1,48 @@
-import React from 'react';
-import { Icon, Input, AutoComplete } from 'antd';
+import React, { useState, useEffect } from 'react';
+import { Icon, Input} from 'antd';
 import './style.css';
-import { options } from './config';
-import { Wraper } from './search-style';
 
-const HeaderSearch = () => {
+import { Wraper } from './search-style';
+import { createSearch } from '../../../redux/actions/h-data-search';
+import { connect } from 'react-redux';
+
+const HeaderSearch = (props) => {
+    const [ data, setData ] = useState(null);    
+    
+    const handleChange = (event) => {
+        setData(event.target.value);        
+    }
+    
+    useEffect(() => {
+        props.create(data);
+    });
+           
     return (
         
         <Wraper className="certain-category-search-wrapper">
-            <AutoComplete
-                className="certain-category-search"
-                dropdownClassName="certain-category-search-dropdown"
-                dropdownMatchSelectWidth={true}
-                dropdownStyle={{ width: 300 }}
-                size="large"
-                style={{ width: '100%' }}
-                dataSource={options}
-                placeholder="input here"
-                optionLabelProp="value"
-            >
-                <Input 
-                    suffix={<Icon type="search" 
-                    className="certain-category-icon" 
-                    style={{borderRadius : '20px'}}
-                />} />
-            </AutoComplete>
+        
+            <Input 
+                suffix = {<Icon type="search" 
+                className = "certain-category-icon" 
+                style = {{borderRadius : '20px'}}
+                />} 
+                onInput={ handleChange }                    
+            />
+                       
         </Wraper>
-       
+
     );
 }
 
-export default HeaderSearch;
+const mapStateToProps = state => {
+    return {
+      hSearch : state.hSearch
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        create : (data) => dispatch(createSearch(data))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderSearch);

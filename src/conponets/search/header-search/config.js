@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { AutoComplete } from 'antd';
+import { connect } from 'react-redux';
+
 const { Option, OptGroup } = AutoComplete;
 
 const dataSource = [
@@ -40,8 +42,8 @@ const dataSource = [
       ],
     },
   ];
-  
-function renderTitle(title) {
+
+  function renderTitle(title) {    
     return (
         <span>
         {title}
@@ -56,22 +58,32 @@ function renderTitle(title) {
         </span>
     );
 }
+//console.log(data)
+const Options = (props) => {   
+    return  dataSource.map(group => (
+                    <OptGroup key={group.title} label={renderTitle(group.title)}>                        
+                    {group.children.map(opt => (
+                        <Option key={opt.title} value={opt.title}>
+                        {opt.title}
+                        <span className="certain-search-item-count">{opt.count} people</span>
+                        </Option>
+                    ))}
+                    </OptGroup>
+                ))
+                .concat([
+                    <Option disabled key="all" className="show-all">
+                    <a href="https://www.google.com/search?q=antd" target="_blank" rel="noopener noreferrer">
+                        View all results
+                    </a>
+                    </Option>,
+                ])
+           
+}
 
-export const options = dataSource
-  .map(group => (
-    <OptGroup key={group.title} label={renderTitle(group.title)}>
-      {group.children.map(opt => (
-        <Option key={opt.title} value={opt.title}>
-          {opt.title}
-          <span className="certain-search-item-count">{opt.count} people</span>
-        </Option>
-      ))}
-    </OptGroup>
-  ))
-  .concat([
-    <Option disabled key="all" className="show-all">
-      <a href="https://www.google.com/search?q=antd" target="_blank" rel="noopener noreferrer">
-        View all results
-      </a>
-    </Option>,
-  ]);
+const mapStateToProps = state => {
+    return {
+      hSearch : state.hSearch
+    }
+  }
+  
+export default connect(mapStateToProps, null)(Options);

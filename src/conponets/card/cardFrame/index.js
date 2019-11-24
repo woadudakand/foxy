@@ -9,7 +9,7 @@ const CardFrame = (props) => {
             <Card 
                 title={props.title} 
                 extra={
-                    <Dropdown overlay={props.menu} trigger={['click']}>
+                    props.menu && <Dropdown overlay={props.menu} trigger={['click']}>
                         <NavLink to="#" style={{fontSize : '20px'}}>
                             <Icon type="more" />
                         </NavLink>

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, Icon } from 'antd';
 
-const { SubMenu } = Menu;
+// const { SubMenu } = Menu;
 
 const NavItems = () => {
     return (
@@ -13,15 +13,48 @@ const NavItems = () => {
             >
                 <Menu.Item key="1">
                     <NavLink to='/'>
-                        <Icon type="mail" />
-                    <span>Dashboard</span>
+                        <Icon type="home" />
+                        <span>Dashboard</span>
                     </NavLink>
                 </Menu.Item>
                 <Menu.Item key="2">
-                    <Icon type="calendar" />
-                    <span>Navigation two</span>
+                    <NavLink to='/blog'>
+                        <Icon type="bold" />
+                        <span>Blog</span>                        
+                    </NavLink>
                 </Menu.Item>
-                <SubMenu
+                <Menu.Item key="3">
+                    <NavLink to='/calendar'>
+                        <Icon type="calendar" />
+                        <span>Calendar</span>                        
+                    </NavLink>
+                </Menu.Item>
+                <Menu.Item key="4">
+                    <NavLink to='/charts'>
+                        <Icon type="bar-chart" />
+                        <span>Charts</span>                        
+                    </NavLink>
+                </Menu.Item>
+                <Menu.Item key="5">
+                    <NavLink to='/gallery'>
+                        <Icon type="file-image" />
+                        <span>Gallery</span>                        
+                    </NavLink>
+                </Menu.Item>
+                <Menu.Item key="6">
+                    <NavLink to='/mail'>
+                        <Icon type="message" />
+                        <span>Mailbox</span>                        
+                    </NavLink>
+                </Menu.Item>
+                <Menu.Item key="8">
+                    <NavLink to='/progressbar'>
+                        <Icon type="check-circle" />
+                        <span>Progress Bar</span>                        
+                    </NavLink>
+                </Menu.Item>
+
+                {/* <SubMenu
                     key="sub1"
                     title={
                     <span>
@@ -50,7 +83,7 @@ const NavItems = () => {
                     <Menu.Item key="8">Option 8</Menu.Item>
                     <Menu.Item key="9">Option 9</Menu.Item>
                     <Menu.Item key="10">Option 10</Menu.Item>
-                </SubMenu>
+                </SubMenu> */}
             </Menu>
         </div>
     );

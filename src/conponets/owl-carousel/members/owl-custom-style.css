@@ -1,0 +1,14 @@
+.owl-dots{
+    position: absolute;
+    top: -73px;
+    right: 0px;
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #547df9;   
+}
+.owl-theme .owl-dots .owl-dot.active span {
+    background: #a4d882; 
+}
