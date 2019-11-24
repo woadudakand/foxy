@@ -9,9 +9,7 @@ import { config } from './chart-config';
 const Layout = lazy(() => import('../../layout/navbar'));
 
 const Chart = () => {
-
-    
-
+   
     return (
         <Fragment>
            <Suspense fallback={<div>Loading...........</div>}>

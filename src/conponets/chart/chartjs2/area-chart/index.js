@@ -8,12 +8,12 @@ const AreaChart = (props) => {
             datasets: [{
               data: props.ctxData1,
               borderColor: props.ctxColor1,
-              borderWidth: 1,
+              borderWidth: 'none',
               backgroundColor: '#547df9'
             },{
                 data: props.ctxData2,
                 borderColor: props.ctxColor2,
-                borderWidth: 1,
+                borderWidth: 'none',
                 backgroundColor: '#a4d882'
             }]
         },

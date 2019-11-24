@@ -1,18 +1,19 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, Icon } from 'antd';
-
+import {Div} from './navbar-style'
 // const { SubMenu } = Menu;
 
 const NavItems = () => {
+    
     return (
-        <div>           
+        <Div>           
             <Menu
                 mode='vertical'
                 theme='dark'
             >
                 <Menu.Item key="1">
-                    <NavLink to='/'>
+                    <NavLink to='/home'>
                         <Icon type="home" />
                         <span>Dashboard</span>
                     </NavLink>
@@ -53,6 +54,19 @@ const NavItems = () => {
                         <span>Progress Bar</span>                        
                     </NavLink>
                 </Menu.Item>
+                <Menu.Item key="9">
+                    <NavLink to='/profile'>
+                        <Icon type="profile" />
+                        <span>Profile</span>                        
+                    </NavLink>
+                </Menu.Item>
+
+                <Menu.Item key="10">
+                    <NavLink to='/widgets'>
+                        <Icon type="box-plot" />
+                        <span>Widgets</span>                        
+                    </NavLink>
+                </Menu.Item>
 
                 {/* <SubMenu
                     key="sub1"
@@ -85,7 +99,7 @@ const NavItems = () => {
                     <Menu.Item key="10">Option 10</Menu.Item>
                 </SubMenu> */}
             </Menu>
-        </div>
+        </Div>
     );
 }
 

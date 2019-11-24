@@ -33,15 +33,3 @@ export const Hr = styled.div `
     height : 1px;
     background : #ddd;
 `;
-
-export const Div = styled.div `
-    li.ant-menu-item{
-        padding: 0 !important;
-    }
-    a{
-        padding: 0px 32px;
-    }
-    a.active{
-        background: #5ba2e4 !important;
-    }
-`;

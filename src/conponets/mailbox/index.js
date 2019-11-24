@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import MailList from './mail-list/inbox';
-const Mailbox = (props) => {
+const MailboxCom = (props) => {
     const { mail } = props;
 
     return (
@@ -27,4 +27,4 @@ const mapStateToProps = state => {
         mail : state.mail
     }
 }
-export default connect(mapStateToProps)(Mailbox);
+export default connect(mapStateToProps)(MailboxCom);

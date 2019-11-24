@@ -17,12 +17,15 @@ import Draft from './container/mailbox/draft';
 import Trash from './container/mailbox/trash';
 import Compose from './container/mailbox/compose';
 import Progress from './container/progressbar';
+import Profile from './container/profile';
+import Widgets from './container/widgets';
 
 const Routes = () => {
     return (               
         <Router>
             <Switch>
                 <Route exact path="/" component={ Dashboard } />
+                <Route exact path="/home" component={ Dashboard } />
                 <Route path="/blog" component={ Blog } />
                 <Route path="/calendar" component={ Calendar } />
                 <Route path="/charts" component={ Charts } />
@@ -34,6 +37,8 @@ const Routes = () => {
                 <Route path="/trash" component={ Trash } />
                 <Route path="/compose" component={ Compose } />
                 <Route path="/progressbar" component={ Progress } />
+                <Route path="/profile" component={ Profile } />
+                <Route path="/widgets" component={ Widgets } />
             </Switch>
         </Router>               
     );

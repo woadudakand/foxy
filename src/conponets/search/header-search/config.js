@@ -60,10 +60,10 @@ const dataSource = [
 }
 //console.log(data)
 const Options = (props) => {   
-    return  dataSource.map(group => (
-                    <OptGroup key={group.title} label={renderTitle(group.title)}>                        
-                    {group.children.map(opt => (
-                        <Option key={opt.title} value={opt.title}>
+    return  dataSource.map((group, key) => (
+                    <OptGroup key={key} label={renderTitle(group.title)}>                        
+                    {group.children.map((opt, key) => (
+                        <Option key={key} value={opt.title}>
                         {opt.title}
                         <span className="certain-search-item-count">{opt.count} people</span>
                         </Option>

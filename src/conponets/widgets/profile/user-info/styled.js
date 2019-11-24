@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 
 export const Wraper = styled.div `
-    padding-left: 15px;
-    padding-top: 12px;
     display: flex;
-    line-height: 100%;
+    line-height: 100%;    
     align-items: center;
     cursor: pointer;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 30px;
 `;
 
 export const UserInfo = styled.div `
-    padding-left: 15px;    
+    padding-top: 15px;    
 `;
 
 export const MessageInfo = styled.div `
@@ -32,16 +33,4 @@ export const AlertWraper = styled.div `
 export const Hr = styled.div `
     height : 1px;
     background : #ddd;
-`;
-
-export const Div = styled.div `
-    li.ant-menu-item{
-        padding: 0 !important;
-    }
-    a{
-        padding: 0px 32px;
-    }
-    a.active{
-        background: #5ba2e4 !important;
-    }
 `;
