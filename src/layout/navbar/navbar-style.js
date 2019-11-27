@@ -38,6 +38,9 @@ export const Div = styled.div `
     li.ant-menu-item{
         padding: 0 !important;
     }
+    .ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title{
+        padding: 0px 33px !important;
+    }
     a{
         padding: 0px 32px;
     }

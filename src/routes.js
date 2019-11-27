@@ -19,6 +19,8 @@ import Compose from './container/mailbox/compose';
 import Progress from './container/progressbar';
 import Profile from './container/profile';
 import Widgets from './container/widgets';
+import Colors from './container/colors';
+import Button from './container/button';
 
 const Routes = () => {
     return (               
@@ -39,6 +41,8 @@ const Routes = () => {
                 <Route path="/progressbar" component={ Progress } />
                 <Route path="/profile" component={ Profile } />
                 <Route path="/widgets" component={ Widgets } />
+                <Route path="/colors" component={ Colors } />
+                <Route path="/btn" component={ Button } />
             </Switch>
         </Router>               
     );
