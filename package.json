@@ -6,6 +6,9 @@
     "@tinymce/tinymce-react": "^3.3.2",
     "antd": "^3.25.1",
     "chart.js": "^2.9.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-meteor": "^6.0.0",
+    "firebase": "^7.4.0",
     "react": "^16.11.0",
     "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.11.0",
@@ -13,12 +16,14 @@
     "react-google-charts": "^3.0.15",
     "react-owl-carousel2": "^0.3.0",
     "react-redux": "^7.1.3",
+    "react-redux-firebase": "^3.0.5",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "react-share": "^3.0.1",
     "react-tinymce": "^0.7.0",
     "redux": "^4.0.4",
+    "redux-firestore": "^0.10.0",
     "redux-thunk": "^2.3.0",
     "styled-components": "^4.4.1"
   },
@@ -31,6 +36,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "lint": "eslint --fix . && echo 'Lint complete.'",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -42,5 +48,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^1.19.1"
   }
 }
